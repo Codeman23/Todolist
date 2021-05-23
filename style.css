@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+
+body {
+  background-image: linear-gradient(-120deg, #ad5ac2 0%, #5946ed 100%);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  padding: 15px;
+}
+.header {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.header__desc {
+  font-size: .95rem;
+  text-align: center;
+}
+
+.header,
+.form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.todoInput,
+.todoButton {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+.todoInput {
+  width: 100%;
+  max-width: 90%;
+}
+.todoButton {
+  color: #445bd7;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.todoButton:hover {
+  background: #445bd7;
+  color: white;
+}
+.todoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoList {
+  width: 100%;
+  max-width: 480px;
+  list-style: none;
+}
+
+.todo {
+  margin: 0 auto 1em;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.filterTodo {
+  padding: 1.2rem;
+}
+
+.trashBtn,
+.completeBtn {
+  background: #445bd7;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.completeBtn {
+  background: rgb(78, 182, 173);
+}
+.todoItem {
+  flex: 1;
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.2rem;
+  background: #445bd7;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 768.98px) {
+  .form {
+    flex-direction: column;
+  }
+  .header {
+    min-height: 10vh;
+  }
+  .filterTodo {
+    padding: .6rem;
+  }
+  .select::after {
+    padding: .65rem;
+  }
+  .inputWrap {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  html {
+    font-size: 12px;
+  }
+}
